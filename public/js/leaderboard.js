@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   try {
     // 呼叫後端 API 獲取排行榜資料
-    const response = await fetch("https://web-game.onrender.com/api/leaderboard");  // 修改為 /api/leaderboard
+    const response = await fetch("https://web-project.onrender.com/api/leaderboard");  // 修改為 /api/leaderboard
     const leaderboardData = await response.json();
 
     // 清空表格
@@ -53,7 +53,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     if (currentUser) {
       try {
-        const response = await fetch("https://web-game.onrender.com/api/leaderboard", {  // 修改為 /api/leaderboard
+        const response = await fetch("https://web-project.onrender.com/api/leaderboard", {  // 修改為 /api/leaderboard
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ username: currentUser.username, score: currentUser.score }),
