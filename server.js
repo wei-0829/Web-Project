@@ -25,7 +25,7 @@ app.get("/leaderboard", (req, res) => {
 // 連接 MongoDB Atlas
 const DB_URI = process.env.MONGODB_URI;
 mongoose
-  .connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(DB_URI)
   .then(() => console.log("Connected to MongoDB Atlas"))
   .catch((error) => console.error("Failed to connect to MongoDB:", error));
 
