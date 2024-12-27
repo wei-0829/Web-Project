@@ -1,12 +1,19 @@
 require('dotenv').config();  // 加載 .env 文件
-
-const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");  // 用來處理文件路徑
 
+const express = require("express");
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 
 app.use(cors());
 app.use(express.json());
