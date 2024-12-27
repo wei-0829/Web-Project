@@ -8,10 +8,12 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  console.log(`Example app listening on port ${port}`);
+});
 
-app.use(cors());
+// 設置 CORS 以允許來自任何來源的請求
+app.use(cors()); // 這將允許所有來源的請求
+
 app.use(express.json());
 
 // 讓 Express 提供 public 目錄中的靜態文件
