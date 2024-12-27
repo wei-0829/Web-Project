@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     // 檢查是否有排行榜資料
     if (leaderboardData.length === 0) {
-      // 如果沒有資料，顯示 "暫無"
+      // 如果沒有資料，顯示 "暫無資料"
       leaderboardTable.innerHTML = "<tr><td colspan='3'>暫無資料</td></tr>";
     } else {
       // 動態生成排行榜表格
