@@ -6,6 +6,8 @@ const mongoose = require("mongoose");
 const path = require("path");  // 用來處理文件路徑
 
 const app = express();
+const port = process.env.PORT;
+
 app.use(cors());
 app.use(express.json());
 
